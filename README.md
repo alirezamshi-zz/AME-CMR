@@ -40,6 +40,8 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  `SIGN_H=[" nhl " , "spengler cup" , "spenglercup" ,  "national league" , "ehc <allcaps> kloten" , "ehc <allcaps> winterthur" , "ehc <allcaps> visp" , "hc <allcaps> ajoie" , "hc <allcaps> thurgau" , "gck <allcaps> lions" , "evz <allcaps> academy" , "sc <allcaps> langenthal" , "ehc <allcaps> olten", "ev <allcaps> train" , "sc <allcaps> bern" , "lausanne hc <allcaps>" , "scl <allcaps> tigers" ,  "zsc <allcaps> linos" , "hc <allcaps> lugano" , "hc <allcaps> davos" ]`
  ### Non-Switzerland Football sign:  
  `SIGN_O=["man utd", "barça"  ,"barca" , "juventus", "man city", "manchester united" , "benfica" , "porto" , "spurs", " psg " , "neymar" , "messi" , "ronaldo" , "real madrid" , "bayern munich" ]`  
+ ### Non-Switzerland ice-hockey:  
+ `SIGN_OH=[" khl " , " nhl " , "stanley cup" , "stanleycup" , "jokerit" , "smashville" , "leijonat"]`
  
  You can run the `data_generation.py` for `tokenized_en.txt` file to see the output in `FH_dataset.txt`.  
  ## Training the word embedding:  
@@ -50,11 +52,31 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  Note: you should first install fasttext from the repository : https://github.com/facebookresearch/fastText  
  
  ## Training Model :
+ In this section, we go to the details of functions in `run.py` file:  
+ This function would do the training for each languages separately, and in each language, first the code would run `data_generation.py` file to build the train/val set. Next, it runs the `train_model.py` code for three ensembles. Then, we extract the last layer of GRU to get the probabilities for each classes. Here, we use active learning strategy. We pick texts which model detect with high probability, and ask the user ro check the annotation. The user can skip it by typing `100`. At the end of each training mode, we ask the user to do another loop or not.  
+ Here is the detail of each function: 
+   
+ `train_model.py`:  
+ Here the model loads the data which is generated with `data_generation.py` file, and save the best model in a `.pth` file. As mentioned in paper, we use embedding+GRU as out model with parameters as bellow:  
  
+ .............................................  
+ `extract_high_precision.py`:  
+ Here we load the best model for each ensembles, and extract the probabilites in the last layer of model. So, for each text, we have a 3*1 vector which shows the probability of assigning it to a specific class.  
+ 
+ ### Active Learning :  
+ Here we change the probability threshold until a proper amount of ice-hockey and football texts are found ( these texts are the ones that are not in annotated file, and doesn't have any initial signs). So, we pick randomly 50 texts from them, and ask user to check the label for the model.  
  
  ## Evaluation :
  
  Here, you can run the `eval.py` file to reproduce the results with pre-train weights of the model.  
- The data is one ##### link ##############  
+ For the test data, we choose randomly from corpus which contain three languages, and give them label manually. Here is the test data and it's label:  
+ 
+ Raw data: ##### link ##############  
+ Tokenized data:  #######link##############  
+ Labels: ############# link ##################  
+ 
+ In this function, we first separate the test set into three file based on language type of each text with FastText language identifier. Then, for the multi-lingual model, we pass each file to it's related model, and gather the result. For the baseline, we translate French and German texts to English, and give the whole test set to English model.  
+ You can run the `eval.py` file to reproduce the result of these two models.  
+ 
  
  
