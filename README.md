@@ -42,6 +42,12 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  `SIGN_O=["man utd", "barça"  ,"barca" , "juventus", "man city", "manchester united" , "benfica" , "porto" , "spurs", " psg " , "neymar" , "messi" , "ronaldo" , "real madrid" , "bayern munich" ]`  
  
  You can run the `data_generation.py` for `tokenized_en.txt` file to see the output in `FH_dataset.txt`.  
+ ## Training the word embedding:  
+ 
+ For building our word embedding which is specific to the corpus, we use FastText skigram algorithms with `minn = 3` , `maxn = 6` and `dim = 300`. Here is the code:  
+ `./fastext skipgram -input tokenized.txt -output out.txt --minn 3 --maxn 6 --dim 300`  
+ 
+ Note: you should first install fasttext from the repository : https://github.com/facebookresearch/fastText  
  
  ## Training Model :
  
