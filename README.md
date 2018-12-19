@@ -41,6 +41,7 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  ### Non-Switzerland Football sign:  
  `SIGN_O=["man utd", "barça"  ,"barca" , "juventus", "man city", "manchester united" , "benfica" , "porto" , "spurs", " psg " , "neymar" , "messi" , "ronaldo" , "real madrid" , "bayern munich" ]`  
  
+ You can run the `data_generation.py` for `tokenized_en.txt` file to see the output in `FH_dataset.txt`.  
  
  ## Training Model :
  
