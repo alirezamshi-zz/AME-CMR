@@ -51,6 +51,9 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  
  Note: you should first install fasttext from the repository : https://github.com/facebookresearch/fastText  
  
+ Here is the embedding vectors for languages that we train :  
+ ################link ########################  
+ 
  ## Training Model :
  In this section, we go to the details of functions in `run.py` file:  
  This function would do the training for each languages separately, and in each language, first the code would run `data_generation.py` file to build the train/val set. Next, it runs the `train_model.py` code for three ensembles. Then, we extract the last layer of GRU to get the probabilities for each classes. Here, we use active learning strategy. We pick texts which model detect with high probability, and ask the user ro check the annotation. The user can skip it by typing `100`. At the end of each training mode, we ask the user to do another loop or not.  
