@@ -50,7 +50,10 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  Note: you should first install fasttext from the repository : https://github.com/facebookresearch/fastText  
  
  Here is the embedding vectors for languages that we train :  
- ################link ########################  
+ English:  ##############link #################  
+ German: ############### link ################  
+ French: ################## link ################  
+
  
  ## Training Model :
  In this section, we go to the details of functions in `run.py` file:  
