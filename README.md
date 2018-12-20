@@ -49,12 +49,6 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  
  Note: you should first install fasttext from the repository : https://github.com/facebookresearch/fastText  
  
- Here is the embedding vectors for languages that we train :  
- English:  ##############link #################  
- German: ############### link ################  
- French: ################## link ################  
-
- 
  ## Training Model :
  In this section, we go to the details of functions in `run.py` file:  
  This function would do the training for each languages separately, and in each language, first the code would run `data_generation.py` file to build the train/val set. Next, it runs the `train_model.py` code for three ensembles. Then, we extract the last layer of GRU to get the probabilities for each classes. Here, we use active learning strategy. We pick texts which model detect with high probability, and ask the user ro check the annotation. The user can skip it by typing `100`. At the end of each training mode, we ask the user to do another loop or not.  
@@ -84,7 +78,9 @@ German:  https://drive.google.com/open?id=1Qt05Z8GKKmy6ll8apnKCgtLR2DKtUaCw
 French:  https://drive.google.com/open?id=15pvBr7OkxFU3yXdWopRDp7b49OtWNk5p  
  
  In this function, we first separate the test set into three file based on language type of each text with FastText language identifier. Then, for the multi-lingual model, we pass each file to it's related model, and gather the result. For the baseline, we translate French and German texts to English, and give the whole test set to English model.  
- You can run the `eval.py` file to reproduce the result of these two models.  
+ You can run the `eval.py` file to reproduce the result of these two models. There is a file named `creating_baseline_model.py` which does the same strategy as `train.py`, so we don't comment on this code.  
  
  
+All requirements for running `eval.py` is here:  
+################ link ############################
  
