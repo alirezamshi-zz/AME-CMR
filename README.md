@@ -74,7 +74,6 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  Here, you can run the `eval.py` file to reproduce the results with pre-train weights of the model.  
  For the test data, we choose randomly from corpus which contain three languages, and give them label manually. Here is the test data and it's label:  
  
- Raw data: ##### link ##############  
  Tokenized data:  #######link##############  
  Labels: ############# link ##################  
  
