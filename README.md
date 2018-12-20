@@ -17,21 +17,14 @@ fasttext 0.1
 
 We tokenize the corpus with a tokenizer that LSIR gives us that is usefull for Twitter datasets. Here is the example of a raw and tokenized version of a sample text:  
 
-English:  
+Sample 1:  
 
- ................................  
- ................................  
+input : Less Monday - The Tuscany Session - Album Out Now #starchmusic #newmusic #swissmusic #funky #feelgood #lessmonday 📷by Anja Schori  
+output : less monday - the tuscany session - album out now <hashtag> starchmusic <hashtag> newmusic <hashtag> swissmusic <hashtag> funky <hashtag> feelgood <hashtag> lessmonday 📷 by anja schori  
 
-French:  
-
-.................................  
-.................................  
- 
- German:  
- 
- ................................  
- ................................  
- 
+Sample 2:  
+input : Pool with a view ⠀ . 🏊‍♂️⛰🏊‍♂️ ⠀ . Book a room in one of the highest villages in Europe with @adnaaffair and work on your #altitudetraining  
+output : pool with a view ⠀ . 🏊 ‍ ♂ ️ ⛰ 🏊 ‍ ♂ ️ ⠀ . book a room in one of the highest villages in europe with <user> and work on your <hashtag> altitudetraining  
 ## Data Generation
 
 Next, we use a file named `data_generation.py` which builds the data in each training process. It would add the labeled texts with texts that have initial labels, then randomly chooses unlabeled data from corpus with the same size of labeled data to balance the train/validation data.  
