@@ -58,9 +58,8 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  Here is the detail of each function: 
    
  `train_model.py`:  
- Here the model loads the data which is generated with `data_generation.py` file, and save the best model in a `.pth` file. As mentioned in paper, we use embedding+GRU as out model with parameters as bellow:  
+ Here the model loads the data which is generated with `data_generation.py` file, and save the best model in a `.pth` file. As mentioned in paper, we use embedding+GRU as our training model.  
  
- .............................................  
  `extract_high_precision.py`:  
  Here we load the best model for each ensembles, and extract the probabilites in the last layer of model. So, for each text, we have a 3*1 vector which shows the probability of assigning it to a specific class.  
  
