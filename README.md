@@ -74,8 +74,14 @@ Next, we use a file named `data_generation.py` which builds the data in each tra
  Here, you can run the `eval.py` file to reproduce the results with pre-train weights of the model.  
  For the test data, we choose randomly from corpus which contain three languages, and give them label manually. Here is the test data and it's label:  
  
- Tokenized data:  #######link##############  
- Labels: ############# link ##################  
+### Tokenized data:  
+English:  https://drive.google.com/open?id=1sfi2nZq_4sSgndma-ifKU8zW6Bv_x24c  
+German:  https://drive.google.com/open?id=1YGasi6Os6iwdb8Dg3AKM71XL9V4naTPe  
+French:  https://drive.google.com/open?id=1a734gB5E5SyHSXhlkj6LYwCua3VhgDtA  
+### Labels:  
+English:  https://drive.google.com/open?id=1sU5T30lKpC1-jHuHcjPtEmUd97BAbW7g  
+German:  https://drive.google.com/open?id=1Qt05Z8GKKmy6ll8apnKCgtLR2DKtUaCw  
+French:  https://drive.google.com/open?id=15pvBr7OkxFU3yXdWopRDp7b49OtWNk5p  
  
  In this function, we first separate the test set into three file based on language type of each text with FastText language identifier. Then, for the multi-lingual model, we pass each file to it's related model, and gather the result. For the baseline, we translate French and German texts to English, and give the whole test set to English model.  
  You can run the `eval.py` file to reproduce the result of these two models.  
