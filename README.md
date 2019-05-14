@@ -1,7 +1,7 @@
 # Multilingual Multimodal Embeddings with Adapting Aligned Languages :
 ## Code for building the bilingual lexicons:
 
-This code is implemented in order to adjust ground-truth bilingual lexicons of MUSE: Multilingual Unsupervised and Supervised Embeddings to our datasets (Multi30k and MS-COCO).  
+This code is implemented in order to adjust ground-truth bilingual lexicons of [MUSE: Multilingual Unsupervised and Supervised Embeddings](https://github.com/facebookresearch/MUSE#ground-truth-bilingual-dictionaries) to our datasets (Multi30k and MS-COCO).  
 
 ## Get initial bilingual lexicons of MUSE:  
 To download lexicons for English, German and Japanese languages, you can simply run:  
