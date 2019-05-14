@@ -19,13 +19,15 @@ wget https://dl.fbaipublicfiles.com/arrival/dictionaries/de-en.0-5000.txt
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/de-en.5000-6500.txt
 ```
 ### MS-COCO:
-`mkdir en-ja`  
-`cd en-ja`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.txt`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.0-5000.txt`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.5000-6500.txt`  
-`mkdir ja-en`  
-`cd ja-en`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.txt`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.0-5000.txt`  
-`wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.5000-6500.txt`  
+```
+mkdir en-ja  
+cd en-ja  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.txt  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.0-5000.txt  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/en-ja.5000-6500.txt  
+mkdir ja-en  
+cd ja-en  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.txt  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.0-5000.txt  
+wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.5000-6500.txt  
+```
