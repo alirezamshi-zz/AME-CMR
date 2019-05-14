@@ -31,3 +31,41 @@ wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.txt
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.0-5000.txt  
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.5000-6500.txt  
 ```
+## Main code:  
+For building and adjusting bilingual lexicons, we first combine "full" and "test" set of MUSE benchmark, then we adjust it to our dataset, and use it for training. For the test set, we adjust "train" set of MUSE benckmark to our dataset.  
+Run `adjust_lexicons.py` to get the desired lexicons for both datasets:  
+```
+adjust_lexicons.py [-h] [--en_de_dir EN_DE_DIR] [--de_en_dir DE_EN_DIR]
+                          [--en_ja_dir EN_JA_DIR] [--ja_en_dir JA_EN_DIR]
+                          [--en_multi30k EN_MULTI30K] [--en_mscoco EN_MSCOCO]
+                          [--de_multi30k DE_MULTI30K] [--ja_mscoco JA_MSCOCO]
+                          [--offset_multi30k OFFSET_MULTI30K]
+                          [--offset_mscoco OFFSET_MSCOCO]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --en_de_dir EN_DE_DIR
+                        Path to (en-de) lexicons
+  --de_en_dir DE_EN_DIR
+                        Path to (de-en) lexicons
+  --en_ja_dir EN_JA_DIR
+                        Path to (en-ja) lexicons
+  --ja_en_dir JA_EN_DIR
+                        Path to (ja-en) lexicons
+  --en_multi30k EN_MULTI30K
+                        Path to English words of Multi30k dataset
+  --en_mscoco EN_MSCOCO
+                        Path to English words of MS-COCO dataset
+  --de_multi30k DE_MULTI30K
+                        Path to German words of Multi30k dataset
+  --ja_mscoco JA_MSCOCO
+                        Path to Japanese words of MS-COCO dataset
+  --offset_multi30k OFFSET_MULTI30K
+                        Divide English and German words (if you have one file
+                        for words)
+  --offset_mscoco OFFSET_MSCOCO
+                        Divide English and Japanese words (if you have one
+                        file for words)
+```
+
+Note: word files for both dataset should be in pickle format.
