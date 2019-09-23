@@ -105,3 +105,21 @@ optional arguments:
   --data_name DATA_NAME
                         {coco,f8k,f30k,10crop}_precomp|coco|f8k|f30k
 ```
+
+### Building the image embeddings:
+
+You should donwload the proper dataset (COCO/Flickr30k), then run the `embedding.py` code to get the embedding of images.
+
+
+### Run the main code : 
+
+Now, you can train the model with `train.py` file : 
+
+## Reference :
+
+If you found this code useful, please cite the main paper.
+
+## TO DO :
+
+1. Add the pretrained-models
+2. Add some results from paper
