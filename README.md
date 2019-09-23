@@ -87,3 +87,21 @@ optional arguments:
 ```
 
 Note: word files for both dataset should be in pickle format.
+
+### Building Word Embeddings :
+
+You should first download the [aligned word vectors of fasttext](https://fasttext.cc/docs/en/aligned-vectors.html), and align them with bilingual lexicons.  
+Then, run the `vocab.py` file to build the initial dictionary of the model.
+
+```
+vocab.py [-h] [--data_path DATA_PATH] [--model_path_en MODEL_PATH_EN]
+                [--model_path_de MODEL_PATH_DE] [--data_name DATA_NAME]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --data_path DATA_PATH
+  --model_path_en MODEL_PATH_EN
+  --model_path_de MODEL_PATH_DE
+  --data_name DATA_NAME
+                        {coco,f8k,f30k,10crop}_precomp|coco|f8k|f30k
+```
