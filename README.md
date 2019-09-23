@@ -2,13 +2,28 @@
 
 Pytorch implementation of the paper: *Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task*, Alireza Mohammadshahi, Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
 
-## Code for building the bilingual lexicons:
+## Dependencies : 
+You should install the following packages for train/testing the model: 
+- Python 2.7
+- [Pytorch](https://pytorch.org/) > 0.2 
+- [Numpy](https://numpy.org/)
+- [Tensorboard](https://www.tensorflow.org/guide/summaries_and_tensorboard)
+- [Pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools)
+- [Torchvision](https://pytorch.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [EuroParl](https://www.statmt.org/europarl/)
+
+## Training :
+
+To train the image-caption retrieval model, you should first build the bilingual lexicons which are used for aligning the word embeddings.
+
+### Code for building the bilingual lexicons:
 
 This code is implemented in order to adjust ground-truth bilingual lexicons of [MUSE: Multilingual Unsupervised and Supervised Embeddings](https://github.com/facebookresearch/MUSE#ground-truth-bilingual-dictionaries) to our datasets (Multi30k and MS-COCO).  
 
-## Get initial bilingual lexicons of MUSE:  
+### Get initial bilingual lexicons of MUSE:  
 To download lexicons for English, German and Japanese languages, you can simply run:  
-### Multi30K:  
+#### Multi30K:  
 ```
 mkdir en-de 
 cd en-de  
@@ -21,7 +36,7 @@ wget https://dl.fbaipublicfiles.com/arrival/dictionaries/de-en.txt
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/de-en.0-5000.txt  
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/de-en.5000-6500.txt
 ```
-### MS-COCO:
+#### MS-COCO:
 ```
 mkdir en-ja  
 cd en-ja  
@@ -34,7 +49,7 @@ wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.txt
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.0-5000.txt  
 wget https://dl.fbaipublicfiles.com/arrival/dictionaries/ja-en.5000-6500.txt  
 ```
-## Main code:  
+### Main code for building lexicons:  
 For building and adjusting bilingual lexicons, we first combine "full" and "test" set of MUSE benchmark, then we adjust it to our dataset, and use it for training. For the test set, we adjust "train" set of MUSE benckmark to our dataset.  
 Run `adjust_lexicons.py` to get the desired lexicons for both datasets:  
 ```
