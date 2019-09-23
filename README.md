@@ -108,8 +108,7 @@ optional arguments:
 
 ### Building the image embeddings:
 
-You should donwload the proper dataset (COCO/Flickr30k), then run the `embedding.py` code to get the embedding of images.
-
+You can download the precomputed embeddings of images from [here](https://github.com/ryankiros/visual-semantic-embedding/) and [here](https://github.com/ivendrov/order-embedding). Also, you can download the original images from here, then compute the image features on your image encoder.
 
 ### Run the main code : 
 
