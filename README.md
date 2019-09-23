@@ -1,7 +1,6 @@
 # Multilingual Multimodal Embeddings with Adapting Aligned Languages :
 
-Pytorch implementation of the paper: *Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task*, Alireza Mohammadshahi
-Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
+Pytorch implementation of the paper: *Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task*, Alireza Mohammadshahi, Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
 
 ## Code for building the bilingual lexicons:
 
