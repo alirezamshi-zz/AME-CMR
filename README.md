@@ -1,4 +1,8 @@
 # Multilingual Multimodal Embeddings with Adapting Aligned Languages :
+
+Pytorch implementation of paper: Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task, Alireza Mohammadshahi
+Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
+
 ## Code for building the bilingual lexicons:
 
 This code is implemented in order to adjust ground-truth bilingual lexicons of [MUSE: Multilingual Unsupervised and Supervised Embeddings](https://github.com/facebookresearch/MUSE#ground-truth-bilingual-dictionaries) to our datasets (Multi30k and MS-COCO).  
