@@ -1,6 +1,6 @@
 # Multilingual Multimodal Embeddings with Adapting Aligned Languages :
 
-Pytorch implementation of the paper: *Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task*, Alireza Mohammadshahi, Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
+Pytorch implementation of the paper: *[Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task](https://www.aclweb.org/anthology/D19-6605/)*, Alireza Mohammadshahi, Remi Lebret, Karl Aberer, 2019 (EMNLP-FEVER 2019)
 
 ## Dependencies : 
 You should install the following packages for train/testing the model: 
@@ -205,7 +205,23 @@ optional arguments:
 
 ## Reference :
 
-If you found this code useful, please cite the main paper.
+If you found this code useful, please cite the main paper:
+```
+@inproceedings{mohammadshahi-etal-2019-aligning-multilingual,
+    title = "Aligning Multilingual Word Embeddings for Cross-Modal Retrieval Task",
+    author = "Mohammadshahi, Alireza  and
+      Lebret, R{\'e}mi  and
+      Aberer, Karl",
+    booktitle = "Proceedings of the Second Workshop on Fact Extraction and VERification (FEVER)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-6605",
+    doi = "10.18653/v1/D19-6605",
+    pages = "27--33",
+}
+```
 
 ## TO DO :
 
